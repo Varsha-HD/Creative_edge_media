@@ -1906,6 +1906,179 @@ section,
   }
 }
 
+/* -----------------------------------------------------------
+# workshop and machinery overview
+------------------------------------------------------------*/
+.machinery .machinery-item {
+  position: relative;
+  background-color: var(--surface-color);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.4s;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  height: 100%;
+}
+
+.machinery .machinery-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-color: var(--accent-color);
+}
+
+.machinery .machinery-item:hover .item-image:before {
+  opacity: 1;
+}
+
+.machinery .machinery-item:hover .item-image img {
+  transform: scale(1.1);
+}
+
+.machinery .machinery-item:hover .social-overlays {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.machinery .machinery-item:hover .item-info h4 {
+  color: var(--accent-color);
+}
+
+.machinery .item-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.machinery .item-image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color), transparent 50%) 100%);
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.machinery .item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.machinery .social-overlays {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 30px 20px 20px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+.machinery .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.machinery .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: var(--contrast-color);
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.machinery .social-icons a:hover {
+  background-color: var(--contrast-color);
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.machinery .item-info {
+  padding: 25px 20px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.machinery .item-info:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color), transparent 60%) 100%);
+  border-radius: 2px;
+}
+
+.machinery .item-info h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.machinery .item-info span {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.machinery .item-info p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+@media (max-width: 768px) {
+  .machinery .machinery-item {
+    margin-bottom: 30px;
+  }
+
+  .machinery .machinery-item .item-image {
+    height: 250px;
+  }
+
+  .machinery .machinery-item .item-info {
+    padding: 20px 15px 25px;
+  }
+
+  .machinery .machinery-item .item-info h4 {
+    font-size: 20px;
+  }
+
+  .machinery .machinery-item .item-info p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
@@ -2076,7 +2249,7 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
-.pricing .pricing-card {
+/* .pricing .pricing-card {
   background-color: var(--surface-color);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -2166,12 +2339,12 @@ section,
 .pricing .pricing-card .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 20%);
   border-color: color-mix(in srgb, var(--accent-color), black 20%);
-}
+} */
 
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
-.faq .section-header h2 {
+/* .faq .section-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--heading-color);
@@ -2356,7 +2529,7 @@ section,
   .faq .faq-item.faq-active .faq-content .content-inner {
     padding-bottom: 20px;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Contact Section
